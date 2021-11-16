@@ -78,6 +78,37 @@
   color: white;
 }
 
+* body main #curio-container {
+  margin: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+* body main #curio-container .curio-card {
+  background: rgba(234, 232, 232, 0.8);
+  width: 20%;
+  border-radius: 8px;
+  text-align: center;
+}
+
+* body main #curio-container .card-img-top {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+* body main #curio-container .card-body {
+  padding: 2px 16px;
+}
+
 * body footer .rodape {
   margin: 0 630px;
 }
