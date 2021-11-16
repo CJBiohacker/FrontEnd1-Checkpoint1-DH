@@ -72,10 +72,13 @@
 }
 
 * body main #curio-titulo {
+  padding: 15px;
+  border-radius: 8px;
   margin-top: 15px;
   font-family: "Lora", serif;
   font-weight: 400;
-  color: white;
+  background: rgba(234, 232, 232, 0.8);
+  color: #2b00ff;
 }
 
 * body main #curio-container {
@@ -93,10 +96,13 @@
 }
 
 * body main #curio-container .curio-card {
-  background: rgba(234, 232, 232, 0.8);
   width: 20%;
   border-radius: 8px;
   text-align: center;
+  border: solid 1px grey;
+  background: rgba(234, 232, 232, 0.8);
+  -webkit-box-shadow: 18px 18px 35px #474845, -15px -15px 35px #c9ccc5;
+          box-shadow: 18px 18px 35px #474845, -15px -15px 35px #c9ccc5;
 }
 
 * body main #curio-container .card-img-top {
@@ -110,7 +116,7 @@
 }
 
 * body footer .rodape {
-  margin: 0 630px;
+  background: black;
 }
 
 * body footer .rodape > h4 {
@@ -118,12 +124,19 @@
   padding: 0px 32px;
 }
 
+* body footer .rodape > h3 {
+  text-align: center;
+  font-family: "Lora", serif;
+  color: white;
+}
+
 * body footer .rodape .icones {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -131,5 +144,13 @@
 
 * body footer .rodape .icones > a {
   width: 50px;
+  margin: 10px 15px;
+}
+
+* body footer .rodape > p {
+  font-family: "Montagu Slab", serif;
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
 }
 /*# sourceMappingURL=checkpoint.css.map */
