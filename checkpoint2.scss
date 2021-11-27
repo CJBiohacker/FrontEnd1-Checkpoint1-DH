@@ -1,0 +1,164 @@
+$h1Cor: rgb(43, 0, 255);
+$bg: rgba(234, 232, 232, 0.8);
+$fontePrincipal:'Lora', serif;
+$fonteSecundaria:'Montagu Slab', serif;
+
+* {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    body {
+        background-image: url(./FotoItaguaiCheckpoint.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+        header { 
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+
+            #nav-bar {
+                background: $bg;
+                border-radius: 8px;
+                padding: 20px 0;
+                
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly; 
+                
+                >img {
+                   width: 30px; 
+                }
+                        
+                #titulo {
+                    font-family: $fontePrincipal;
+                    color: $h1Cor;
+                    text-align: center;
+                }
+            }
+        }
+
+        main {
+            margin-top: 15px;
+            margin-bottom: 20px;
+
+            >form {
+               display: grid;
+               grid-template-columns: 10% 10% 55% 25%;
+               grid-template-rows: 20% 20% 20% 20% 20%;
+               grid-template-areas:
+               "d e a"
+               "d e b"
+               "d e b"
+               "d e b"
+               "d e c"
+               ;
+
+                >h1 {
+                    grid-area: a;
+                    padding-bottom: 20px;
+
+                    font-family: $fonteSecundaria;
+                }                                    
+
+                .container-dados {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: baseline;
+                                        
+                    grid-area: b;
+                    gap: 10px;
+
+                    font-family: $fontePrincipal;
+
+                    .campo {
+                             
+
+                        &:hover {
+                           animation: 0.25s linear 0s 1 alternate both expansao;
+                           
+                           @keyframes expansao {
+                                0% {transform: scale(1,1);}
+                                100% {transform: scale(1.2,1.2);}
+                           }
+
+                        }
+                    }
+                              
+                    .container-motivo {
+               
+
+                        #checkboxes-motivo {
+                           
+        
+                        }
+                    }     
+                }
+
+                #container-buttons {
+                    display: flex;
+                    align-items: center;
+
+                    grid-area: c;
+                    gap: 20px;
+                    
+
+                }
+            } 
+        }
+        
+        footer { 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;         // Força a posição do rodapé no fundo do site. Paliativo passível de ajuste.
+            bottom: -190px;
+
+            .rodape {   
+                
+
+                background: black;
+
+                >h4 {
+                    font-family: $fontePrincipal;
+                    padding: 0px 32px;
+                                    
+                }
+
+                >h3 {
+                    text-align: center;
+                    font-family: $fontePrincipal;
+                    color: white;
+
+                }
+
+                .icones {
+                    display: flex;
+                    justify-content: center;   
+                    align-items: center;
+                                      
+
+                    >a {
+                       width: 50px;
+                       margin: 10px 15px;
+                
+                    }
+                }
+
+                >p {
+                    font-family: $fonteSecundaria;
+                    color: white;
+                    text-align: center;
+                    padding-bottom: 10px;
+
+                }
+            }     
+        }  
+    }   
+}

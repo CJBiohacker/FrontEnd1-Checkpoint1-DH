@@ -1,0 +1,193 @@
+* {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  background-image: url(./FotoItaguaiCheckpoint.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+* body header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
+
+* body header #nav-bar {
+  background: rgba(234, 232, 232, 0.8);
+  border-radius: 8px;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+* body header #nav-bar > img {
+  width: 30px;
+}
+
+* body header #nav-bar #titulo {
+  font-family: "Lora", serif;
+  color: #2b00ff;
+  text-align: center;
+}
+
+* body main {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+* body main > form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 10% 55% 25%;
+      grid-template-columns: 10% 10% 55% 25%;
+  -ms-grid-rows: 20% 20% 20% 20% 20%;
+      grid-template-rows: 20% 20% 20% 20% 20%;
+      grid-template-areas: "d e a" "d e b" "d e b" "d e b" "d e c";
+}
+
+* body main > form > h1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: a;
+  padding-bottom: 20px;
+  font-family: "Montagu Slab", serif;
+}
+
+* body main > form .container-dados {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: b;
+  gap: 10px;
+  font-family: "Lora", serif;
+}
+
+* body main > form .container-dados .campo:hover {
+  -webkit-animation: 0.25s linear 0s 1 alternate both expansao;
+          animation: 0.25s linear 0s 1 alternate both expansao;
+}
+
+@-webkit-keyframes expansao {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+  }
+}
+
+@keyframes expansao {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+  }
+}
+
+* body main > form #container-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: c;
+  gap: 20px;
+}
+
+* body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  bottom: -190px;
+}
+
+* body footer .rodape {
+  background: black;
+}
+
+* body footer .rodape > h4 {
+  font-family: "Lora", serif;
+  padding: 0px 32px;
+}
+
+* body footer .rodape > h3 {
+  text-align: center;
+  font-family: "Lora", serif;
+  color: white;
+}
+
+* body footer .rodape .icones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* body footer .rodape .icones > a {
+  width: 50px;
+  margin: 10px 15px;
+}
+
+* body footer .rodape > p {
+  font-family: "Montagu Slab", serif;
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+}
+/*# sourceMappingURL=checkpoint2.css.map */
