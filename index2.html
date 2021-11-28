@@ -29,51 +29,69 @@
 
     <main>
         <form>
-            <h1>Contato Turístico</h1>
             <div class="container-dados">
-                <input type="text" placeholder="Nome Completo" name="nome" class="campo" id="nome" maxlength="100"><br>
-                <input type="text" placeholder="Email" name="email" class="campo" id="email"><br>
-                <input type="text" placeholder="Celular Ex: +5521969699696" name="celular" class="campo"
-                    id="celular"><br>
-                <input type="date" name="data" class="campo" id="data"><br>
+                <h1>Contato Turístico</h1>
                 <div>
-                    <p>Você é maior de idade?</p>
-                    <input type="radio" name="senha" value="+18" id="senha">
-                    <label for="+18">Sim</label>
-                    <input type="radio" name="senha" value="+18" id="senha">
-                    <label for="+18">Não</label>
+                    <label class="label-texto" for="nome">Nome:</label>
+                    <input type="text" placeholder=" Ex.:" name="nome" class="campo" id="nome" maxlength="100">
+                </div><br>
+                <div>
+                    <label class="label-texto" for="email">Email:</label>
+                    <input type="text" placeholder=" Ex.: abc@gmail.com" name="email" class="campo" id="email">
+                </div><br>
+                <div>
+                    <label class="label-texto" for="celular">Tel/Cel:</label>
+                    <input type="text" placeholder=" Ex.: +5521969699696" name="celular" class="campo" id="celular">
+                </div><br>
+                <div>
+                    <label class="label-texto" for="data">Data Nasc.:</label>
+                    <input type="date" name="data" class="campo" id="data">
+                </div><br>
+                <div class="container-idade">
+                    <p class="label-texto">Você é maior de idade?</p>
+                    <input type="radio" name="idade" value="+18" class="campo" id="idade">
+                    <label class="label-texto" for="+18">Sim</label>
+                    <input type="radio" name="idade" value="+18" class="campo" id="idade">
+                    <label class="label-texto" for="+18">Não</label>
                 </div>
                 <span>
-                    <label for="interesse">Escolha um ponto do seu interesse na cidade:</label>
-
-                    <select name="interesse" id="select-interesse">
+                    <label class="label-texto" for="interesse">Escolha um ponto do seu interesse na cidade:</label>
+                    <select class="label-texto" name="interesse" id="interesse">
                         <option value="pvc">Praça Vicente Cicarino</option>
-                        <option value="pqExpo">Parque Municipal (Área da Expo)</option>
-                        <option value="donZelitus">Praia de Coroa Grande</option>
-
+                        <option value="expo">Parque Municipal (Área da Expo)</option>
+                        <option value="coroa">Praia de Coroa Grande</option>
                     </select>
                 </span>
                 <div id="container-motivo">
-                    <label for="interesse">Motivo da visita à cidade:</label>
+                    <label class="label-texto" for="interesse">Motivo da visita à cidade:</label>
                     <span id="checkboxes-motivo">
-                        <input type="checkbox" name="turista" value="interesse" id="turista"><label
+                        <input type="checkbox" name="turista" value="interesse" class="campo" id="turista"><label
                             for="turista">&nbsp;Turismo</label>
-                        <input type="checkbox" name="residente" value="interesse" id="residente"><label
+                        <input type="checkbox" name="residente" value="interesse" class="campo" id="residente"><label
                             for="residente">&nbsp;Moradia</label>
-                        <input type="checkbox" name="estudante" value="interesse" id="estudante"><label
+                        <input type="checkbox" name="estudante" value="interesse" class="campo" id="estudante"><label
                             for="estudante">&nbsp;Estudo</label>
                     </span>
                 </div>
-            </div>
-            <div id="container-buttons">
-                <button type="submit">Enviar</button>
-                <button type="reset">Resetar</button>
+                <div id="container-buttons">
+                    <button type="submit" class="pushable">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front">Enviar</span>
+                    </button>
+                    <button type="submit" class="pushable">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front">Resetar</span>
+                    </button>
+                </div>
             </div>
         </form>
     </main>
 
     <footer>
         <div class="rodape">
+            <a href="http://    "></a>
             <h3>Redes Sociais</h3>
             <div class="icones">
                 <a id="icone-ig" href="https://www.instagram.com/prefeituraitaguai/?hl=pt" target="blank"><img

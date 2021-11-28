@@ -2,6 +2,7 @@ $h1Cor: rgb(43, 0, 255);
 $bg: rgba(234, 232, 232, 0.8);
 $fontePrincipal:'Lora', serif;
 $fonteSecundaria:'Montagu Slab', serif;
+$textoFormCor:#3E065F;
 
 * {
     margin: 0px;
@@ -15,7 +16,6 @@ $fonteSecundaria:'Montagu Slab', serif;
         background-size: cover;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
         
         header { 
             position: -webkit-sticky;
@@ -32,7 +32,7 @@ $fonteSecundaria:'Montagu Slab', serif;
                 justify-content: space-evenly; 
                 
                 >img {
-                   width: 30px; 
+                   width: 35px; 
                 }
                         
                 #titulo {
@@ -48,54 +48,76 @@ $fonteSecundaria:'Montagu Slab', serif;
             margin-bottom: 20px;
 
             >form {
-               display: grid;
-               grid-template-columns: 10% 10% 55% 25%;
-               grid-template-rows: 20% 20% 20% 20% 20%;
-               grid-template-areas:
-               "d e a"
-               "d e b"
-               "d e b"
-               "d e b"
-               "d e c"
-               ;
+                margin-top: 40px;
 
-                >h1 {
-                    grid-area: a;
-                    padding-bottom: 20px;
-
-                    font-family: $fonteSecundaria;
-                }                                    
+                display: grid;
+                grid-template-columns: 23% 54% 23%;
+                grid-template-rows: 20% 20% 20% 20% 20%;
+                grid-template-areas:
+                "d a e "
+                "d b e "
+                "d b e "
+                "d b e "
+                "d c e "
+                ;                  
 
                 .container-dados {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    align-items: baseline;
+                    align-items: center;
                                         
                     grid-area: b;
                     gap: 10px;
 
                     font-family: $fontePrincipal;
+                    background-color: rgba(45, 154, 238, 0.8);
+                    
+                    padding: 15px;
+                    border-radius: 8px;
+                    background: linear-gradient(145deg, rgba(45, 154, 238, 0.8), #30a5ff);                 
+
+                    >h1 {
+                        grid-area: a;
+                        padding-bottom: 5px;
+                        
+                        font-family: $fonteSecundaria;
+                        color: $textoFormCor;
+                    }    
+                    
+                    .label-texto {
+                        color: $textoFormCor;
+                        font-family: $fonteSecundaria;
+                        font-weight: 500;
+                        font-size: 18px;
+
+                    }
 
                     .campo {
-                             
+                        border: 1.5px solid green;
+                        border-radius: 2px;
 
                         &:hover {
                            animation: 0.25s linear 0s 1 alternate both expansao;
                            
                            @keyframes expansao {
-                                0% {transform: scale(1,1);}
                                 100% {transform: scale(1.2,1.2);}
                            }
-
                         }
                     }
-                              
-                    .container-motivo {
-               
 
+                    .container-idade {
+                        display: flex;
+                        gap: 10px;
+
+                    }
+                              
+                    #container-motivo {
+                       
                         #checkboxes-motivo {
-                           
+                            color: #3E065F;
+                            font-family: $fonteSecundaria;
+                            font-weight: 500;
         
                         }
                     }     
@@ -107,21 +129,108 @@ $fonteSecundaria:'Montagu Slab', serif;
 
                     grid-area: c;
                     gap: 20px;
-                    
+                
+                    .pushable {
+                        position: relative;
+                        border: none;
+                        background: transparent;
+                        padding: 0;
+                        cursor: pointer;
+                        outline-offset: 4px;
+                        transition: filter 250ms;
 
+                        &:hover {
+                            filter: brightness(110%);
+
+                            .front {
+                                transform: translateY(-6px);
+                                transition: transform
+                          250ms
+                          cubic-bezier(.3, .7, .4, 1.5);
+                            }
+
+                            .shadow {
+                                transform: translateY(4px);
+                                transition: transform
+                          250ms
+                          cubic-bezier(.3, .7, .4, 1.5);
+                            }
+                        }
+
+                        &:active {
+
+                            .front {
+                                transform: translateY(-2px);
+                                transition: transform 34ms;
+                            }
+
+                            .shadow {
+                                transform: translateY(1px);
+                                transition: transform 34ms;
+                            }
+                        }
+
+                        &:focus {
+
+                            &:not(:focus-visible) {
+                                outline: none;
+                            }
+                        }
+                    }
+
+                    .shadow {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 12px;
+                        background: hsl(250, 100%, 50%) /0.70 ;
+                        will-change: transform;
+                        transform: translateY(2px);
+                        transition: transform
+                          600ms
+                          cubic-bezier(.3, .7, .4, 1);
+                    }
+                    
+                    .edge {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 12px;
+                        background: linear-gradient(
+                          to left,
+                          hsl(340, 100%, 16%) 0%,
+                          hsl(340, 100%, 32%) 8%,
+                          hsl(340, 100%, 32%) 92%,
+                          hsl(340, 100%, 16%) 100%
+                        );
+                    }
+                    .front {
+                        display: block;
+                        position: relative;
+                        padding: 12px 42px;
+                        border-radius: 12px;
+                        font-size: 1.25rem;
+                        color: white;
+                        background: hsl(345, 100%, 47%);
+                        will-change: transform;
+                        transform: translateY(-4px);
+                        transition: transform
+                          600ms
+                          cubic-bezier(.3, .7, .4, 1);
+                    }                                                     
                 }
             } 
         }
         
         footer { 
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            position: relative;         // Força a posição do rodapé no fundo do site. Paliativo passível de ajuste.
-            bottom: -190px;
+            position: relative;
+            bottom: -54px;
 
-            .rodape {   
-                
+            .rodape {
 
                 background: black;
 
